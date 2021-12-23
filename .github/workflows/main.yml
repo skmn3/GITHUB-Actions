@@ -1,0 +1,26 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+      - main
+      - develop
+
+jobs:
+  deploy_github:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: c-hive/gha-yarn-cache@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '17.x'
+
+    - name: YARN install
+      run: yarn
+
+    - name: Build
+      run: yarn build
