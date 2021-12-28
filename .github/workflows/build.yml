@@ -1,4 +1,4 @@
-name: CI
+name: build
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
       - develop
 
 jobs:
-  CI:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 60
 
