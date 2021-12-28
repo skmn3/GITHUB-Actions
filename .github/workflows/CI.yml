@@ -24,3 +24,6 @@ jobs:
 
       - name: Build
         run: yarn build
+
+      - name: Deploy
+        run: yarn dist/main
