@@ -23,7 +23,7 @@ jobs:
         run: yarn
 
       - name: Build
-        run: yarn start
+        run: yarn start:prod
 
       - name: Deploy
         run: yarn dist/main
